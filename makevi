@@ -1,0 +1,16 @@
+# @(#) makevi 1.9@(#)
+#
+type="`uname -m`"
+#
+case $type in
+	pdp11-70 | vax-780 | vax-750 | 370 | 3B-20* | c70 | NS-32016 )
+		type=`echo $type | sed -e 's/.*-//p'`
+	 	src="src$type"
+		;;
+	*     )  echo "Sorry, vi may not work on your system"
+		exit
+		;;
+esac
+
+make -f vi.mk all $src
+make -f vi.mk clean     

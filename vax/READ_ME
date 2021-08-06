@@ -1,0 +1,19 @@
+This is version 3 (3.9) of the editor.
+
+Version 2 corresponds to version 3 without the enhancements in 3.
+There is no reason to use 2 unless you have a pdp-11 that does not have
+overlay software, since 3 contains all the bug fixes and some new features.
+
+The include file local/uparm.h should be installed, as ex_tune.h needs it.
+The contents of this include file can be modified if you wish to place
+the editor in a nonstandard location.
+
+Conditional compilation flags:
+	-DTRACE		for debugging
+	-DVFORK		for UCB Vax/Unix with the vfork system call.
+	-DCHDIR		compile in undocumented chdir (cd) command
+	-DLISP		compile in lisp hacks
+	-DUCVISUAL	compile in code to handle \ escapes for visual on
+			upper case only terminals.  gross.
+
+

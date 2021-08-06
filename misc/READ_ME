@@ -1,0 +1,4 @@
+Misc. things associated with the editor.  mkstr and xstr are needed to
+get it to compile.  (Actually, you could make a few minor changes to
+the error routines and get by without them, but this is a bad idea.)
+
